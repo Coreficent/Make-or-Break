@@ -234,12 +234,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Hello Hatty, this is just a tempory comment section to describe the changes
-    \nthat could be deleted later. Feel free to delete this comment and write your
-    own.\n\nTo rotate the teapot, use the arrow keys. You may also use the number
-    keys \nto rotate towards certain presets. 1, 3, 7, and 9 are not configured yet.\n\nI
-    will be porting the shaders, working on the game logic, and creating the ui\nin
-    that order. Let me know what you think or if there's anything to improve."
+  m_Text: "Shaders ported! Well shader singular for now. To use a custom shader,
+    do:\n\n1) in your project folder area, right click -> create -> material.\n\n2)
+    In the inspector, there is a dropdown for \"Shader\". Unity uses the \"Standard\"\nshader
+    by default, but you can change it to \"Coreficent/Anime\". As you can see, \nthere
+    are some custom shader parameters such as texture, outline darkness, and \noutline
+    thickness.\n\n3) assign the material to the mesh either in the inspector or by
+    dragging the material.\n\nThere is an example material under Assets/Display/Material
+    for the Utah teapot.\n\nTodo:\n\n1) not too sure what to call the shader, it
+    is just called Anime shader for now.\n\n2) the shader does not take lighting
+    into account yet. I will implement that with some\ntoon shading in the next version
+    of the shader. I will get the game logic working first,  \nand then come back
+    to this.\n\nLet me know if there are any questions. :)\n\n\n"
 --- !u!222 &434597935
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -329,12 +335,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 14a2e793caa13f84cbee69fec74d5842, type: 2}
+      objectReference: {fileID: 2100000, guid: c3cb3f9a9e623174b8cb35906c65e9df, type: 2}
     - target: {fileID: -895306380916907690, guid: 89c30064a1ca00c4ba4586705b16bd5d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 14a2e793caa13f84cbee69fec74d5842, type: 2}
+      objectReference: {fileID: 2100000, guid: c3cb3f9a9e623174b8cb35906c65e9df, type: 2}
     - target: {fileID: 919132149155446097, guid: 89c30064a1ca00c4ba4586705b16bd5d,
         type: 3}
       propertyPath: m_Name
@@ -637,7 +643,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
