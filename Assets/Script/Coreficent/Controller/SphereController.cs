@@ -51,7 +51,7 @@
 
         private void LerpTo(Vector3 forward, Vector3 upwards)
         {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(forward, upwards), RotationSpeed * 2.0f * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(forward, upwards), RotationSpeed * 5.0f * Time.deltaTime);
         }
     }
 }
