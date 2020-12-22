@@ -1,7 +1,5 @@
 ﻿namespace Coreficent.Transform
 {
-    using System.Collections;
-    using System.Collections.Generic;
     using UnityEngine;
 
     public class SphereController : MonoBehaviour
@@ -53,7 +51,6 @@
 
         private void LerpTo(Vector3 forward, Vector3 upwards)
         {
-            //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(forward, upwards), RotationSpeed / 20 * Time.deltaTime);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(forward, upwards), RotationSpeed * 2.0f * Time.deltaTime);
         }
     }
