@@ -8,9 +8,11 @@
     public class Artifact : MonoBehaviour
     {
         public List<string> Predicates = new List<string>();
+        public string CurrentState = "Origin";
+        public string NextState = "Origin";
 
+        // a list where each entry is the current state, required conditions, and the next state
         private List<Tuple<string, List<Tuple<string, string>>, string>> _logic = new List<Tuple<string, List<Tuple<string, string>>, string>>();
-        private string _state = "Origin";
 
         private void Start()
         {
@@ -19,13 +21,38 @@
 
         public bool CanAdvance(Dictionary<string, GameObject> _artifactLookup)
         {
-
+            foreach (Tuple<string, List<Tuple<string, string>>, string> i in _logic)
+            {
+                string currentState = i.Item1;
+                if (currentState == CurrentState)
+                {
+                    bool satisifiedAll = true;
+                    List<Tuple<string, string>> conditions = i.Item2;
+                    foreach (Tuple<string, string> condition in conditions)
+                    {
+                        string artifact = condition.Item1;
+                        string state = condition.Item2;
+                        // TODO error handling
+                        if (!_artifactLookup.ContainsKey(artifact) || _artifactLookup[artifact].GetComponent<Artifact>().CurrentState != state)
+                        {
+                            satisifiedAll = false;
+                        }
+                    }
+                    if (satisifiedAll)
+                    {
+                        string nextState = i.Item3;
+                        NextState = nextState;
+                        return true;
+                    }
+                }
+            }
             return false;
         }
-        public void Play()
+        public void Advance()
         {
 
         }
+
         private void ParsePredicates()
         {
             // TODO error handling

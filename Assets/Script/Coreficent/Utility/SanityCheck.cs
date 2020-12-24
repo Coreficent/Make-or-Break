@@ -1,6 +1,5 @@
 ﻿namespace Coreficent.Utility
 {
-    using System;
     using UnityEngine;
     using UnityEngine.SceneManagement;
 
