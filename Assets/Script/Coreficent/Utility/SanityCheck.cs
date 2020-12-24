@@ -1,5 +1,6 @@
 ﻿namespace Coreficent.Utility
 {
+    using System;
     using UnityEngine;
     using UnityEngine.SceneManagement;
 
@@ -14,7 +15,7 @@
 
                 foreach (object i in variables)
                 {
-                    if (i == null)
+                    if (i == null || i.ToString() == "null")
                     {
                         sanityCheckPassed = false;
                         Debug.Log(owner + _delimiter + "has an unexpected null variable in" + _delimiter + SceneManager.GetActiveScene().name);
