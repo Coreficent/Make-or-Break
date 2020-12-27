@@ -56,7 +56,7 @@
         private void ParsePredicates()
         {
             // TODO error handling
-            // the format is: (CurrentState, [Artifact:State]) -> NextState
+            // the format is: (CurrentState, [ArtifactA:State, ArtifactA:State]) -> NextState
 
             DebugLogger.Log("Parsing Predicates for" + " " + name);
 
@@ -69,7 +69,6 @@
                 DebugLogger.Log("currentState", currentState);
 
                 string conditionList = trim.Substring(trim.IndexOf('[') + 1, trim.IndexOf(']') - trim.IndexOf('[') - 1);
-
 
                 List<Tuple<string, string>> conditions = new List<Tuple<string, string>>();
 
