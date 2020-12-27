@@ -5,31 +5,30 @@
 
 float _OutlineDarkness;
 float _OutlineThickness;
+float _PrecalculatedNormal;
 float4 _MainTex_ST;
 sampler2D _MainTex;
 
 struct appdata
 {
     float2 uv : TEXCOORD0;
-    #ifdef USE_PRECALCULATED_NORMAL
-        float3 normal : TEXCOORD1;
-    #else
-        float3 normal : NORMAL;
-    #endif
+    float3 vertexNormal : NORMAL;
+    float3 customNormal : TEXCOORD3;
     float4 vertex : POSITION;
 };
 
 struct v2f
 {
     float2 uv : TEXCOORD0;
-    float4 position : SV_POSITION;
+    float4 pos : SV_POSITION;
 };
 
 v2f vert(appdata v)
 {
     v2f o;
-
-    o.position = UnityObjectToClipPos(normalize(v.normal) * _OutlineThickness + v.vertex);
+    
+    float3 normal = lerp(v.vertexNormal, v.customNormal, _PrecalculatedNormal);
+    o.pos = UnityObjectToClipPos(normalize(normal) * _OutlineThickness + v.vertex);
     o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 
     return o;

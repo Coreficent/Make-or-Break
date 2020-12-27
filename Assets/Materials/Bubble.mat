@@ -69,6 +69,11 @@ Material:
     - _OutlineDarkness: 0
     - _OutlineThickness: 0.001
     - _Parallax: 0.02
+    - _PrecalculatedNormal: 0
+    - _ShadeDarkness: 0.5
+    - _ShadeThreshold: 0.5
+    - _ShadingDarkness: 0.5
+    - _ShadowThreshold: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
