@@ -7,15 +7,17 @@
 
     public class Main : MonoBehaviour
     {
+        [SerializeField] private Transform _artifactContainer;
+
         private Dictionary<string, GameObject> _artifactLookup = new Dictionary<string, GameObject>();
-        private Transform _artifactContainer = null;
+        
         private bool _pendingAnimation = false;
 
         // initializer
         private void Start()
         {
             DebugLogger.Log("main initialized");
-            _artifactContainer = transform.Find("Display").transform.Find("Artifact");
+            SanityCheck.Check(this, _artifactContainer);
             ConstructLookup();
         }
 
