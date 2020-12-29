@@ -396,7 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 141dd50fb2aa5e94491ec519119e203d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mode: 0
+  _mode: 0
 --- !u!1 &351946189 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b777523111ca2744a86b3ac5cd1312f4,
@@ -1304,7 +1304,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Predicates:
   - (Origin, []) -> Nova
-  Transitioning: 0
   CurrentState: Origin
   NextState: Origin
 --- !u!1 &963194225
@@ -1555,7 +1554,6 @@ MonoBehaviour:
   - (Origin, [Sun:Nova]) -> Sapling
   - (Sapling, [Water:River, Sun:Nova]) -> Bush
   - (Sapling, [Water:River]) -> Cactus
-  Transitioning: 0
   CurrentState: Origin
   NextState: Origin
 --- !u!95 &1178319276
@@ -1818,7 +1816,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Predicates:
   - (Origin, [Sun:Nova]) -> River
-  Transitioning: 0
   CurrentState: Origin
   NextState: Origin
 --- !u!1 &1433121090

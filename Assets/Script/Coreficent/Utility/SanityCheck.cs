@@ -8,7 +8,7 @@
         private static readonly string _delimiter = "::";
         public static void Check(object owner, params object[] variables)
         {
-            if (ApplicationMode._applicationMode.DebugMode)
+            if (ApplicationMode.DebugMode == ApplicationMode.ApplicationState.Debug)
             {
                 bool sanityCheckPassed = true;
 

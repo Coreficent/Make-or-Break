@@ -14,10 +14,18 @@
 
         // a list where each entry is the current state, required conditions, and the next state
         private readonly List<Tuple<string, List<Tuple<string, string>>, string>> _logic = new List<Tuple<string, List<Tuple<string, string>>, string>>();
-        
-        public void ParsePredicates()
+
+        private Animator _animator;
+        private Artifact _artifact;
+
+        private void Awake()
         {
-            // TODO error handling
+            _animator = GetComponent<Animator>();
+            _artifact = GetComponent<Artifact>();
+
+            SanityCheck.Check(this, _animator, _artifact);
+
+            DebugLogger.ToDo("error handling in artifact");
             // the format is: (CurrentState, [ArtifactA:State, ArtifactA:State]) -> NextState
 
             DebugLogger.Log("Parsing Predicates for" + " " + name);
@@ -55,9 +63,11 @@
             }
 
             DebugLogger.Log("Finishing Predicates for" + " " + name);
+
+            DebugLogger.Log("Artifact initialized: awoken");
         }
 
-        public bool CanAdvance(Dictionary<string, GameObject> _artifactLookup)
+        public bool CanAdvance(Dictionary<string, Artifact> _artifactLookup)
         {
             foreach (Tuple<string, List<Tuple<string, string>>, string> i in _logic)
             {
@@ -74,7 +84,7 @@
                         DebugLogger.Log("condition artifact", artifact);
                         DebugLogger.Log("condition state", state);
                         // TODO error handling
-                        if (!_artifactLookup.ContainsKey(artifact) || _artifactLookup[artifact].GetComponent<Artifact>().CurrentState != state)
+                        if (!_artifactLookup.ContainsKey(artifact) || _artifactLookup[artifact].CurrentState != state)
                         {
                             satisifiedAll = false;
                         }
@@ -92,8 +102,7 @@
 
         public void Advance()
         {
-            GetComponent<Animator>().SetBool(GetComponent<Artifact>().NextState, true);
-            Debug.Log("advance!");
+            _animator.SetBool(_artifact.NextState, true);
         }
     }
 }

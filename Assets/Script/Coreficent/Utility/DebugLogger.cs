@@ -5,7 +5,7 @@
     public class DebugLogger
     {
         private static readonly string _delimiter = "::";
-        private static readonly string _ender = "";
+        private static readonly string _ender = ".";
 
         public static void ToDo(object message)
         {
@@ -32,7 +32,7 @@
 
         private static void Output(string messageType, object message)
         {
-            if (ApplicationMode._applicationMode.DebugMode)
+            if (ApplicationMode.DebugMode == ApplicationMode.ApplicationState.Debug)
             {
                 Debug.Log(messageType + _delimiter + message + _ender);
             }
