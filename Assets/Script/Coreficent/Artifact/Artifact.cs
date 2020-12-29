@@ -7,15 +7,14 @@
 
     public class Artifact : MonoBehaviour
     {
-        public List<string> Predicates = new List<string>();
+        [SerializeField] private List<string> Predicates = new List<string>();
 
-        public bool Transitioning = false;
         public string CurrentState = "Origin";
         public string NextState = "Origin";
 
         // a list where each entry is the current state, required conditions, and the next state
-        private List<Tuple<string, List<Tuple<string, string>>, string>> _logic = new List<Tuple<string, List<Tuple<string, string>>, string>>();
-
+        private readonly List<Tuple<string, List<Tuple<string, string>>, string>> _logic = new List<Tuple<string, List<Tuple<string, string>>, string>>();
+        
         public void ParsePredicates()
         {
             // TODO error handling
@@ -93,7 +92,6 @@
 
         public void Advance()
         {
-            Transitioning = true;
             GetComponent<Animator>().SetBool(GetComponent<Artifact>().NextState, true);
             Debug.Log("advance!");
         }

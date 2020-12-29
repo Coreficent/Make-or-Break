@@ -9,8 +9,9 @@
     {
         [SerializeField] private Transform _artifactContainer;
 
-        private Dictionary<string, GameObject> _artifactLookup = new Dictionary<string, GameObject>();
-        
+        private readonly Dictionary<string, GameObject> _artifactLookup = new Dictionary<string, GameObject>();
+        private readonly List<Artifact> _artifacts = new List<Artifact>();
+
         private bool _pendingAnimation = false;
 
         // initializer
@@ -26,22 +27,12 @@
         {
             if (Input.GetKeyDown(KeyCode.Alpha1) || _pendingAnimation)
             {
-                foreach (Transform artifact in _artifactContainer)
+                foreach (Artifact artifact in _artifacts)
                 {
-                    if (artifact.GetComponent<Artifact>().Transitioning)
-                    {
-                        //return;
-                    }
-                }
-
-                foreach (Transform artifact in _artifactContainer)
-                {
-                    bool canAdvance = artifact.GetComponent<Artifact>().CanAdvance(_artifactLookup);
-                    DebugLogger.Log(artifact.name + " can advance", canAdvance);
-                    if (canAdvance)
+                    if (artifact.CanAdvance(_artifactLookup))
                     {
                         _pendingAnimation = true;
-                        artifact.GetComponent<Artifact>().Advance();
+                        artifact.Advance();
                         return;
                     }
                 }
@@ -51,10 +42,13 @@
 
         private void ConstructLookup()
         {
-            foreach (Transform artifact in _artifactContainer)
+            foreach (Transform artifactTransform in _artifactContainer)
             {
-                artifact.GetComponent<Artifact>().ParsePredicates();
-                _artifactLookup.Add(artifact.name, artifact.gameObject);
+                Artifact artifact = artifactTransform.GetComponent<Artifact>();
+                artifact.ParsePredicates();
+
+                _artifacts.Add(artifact);
+                _artifactLookup.Add(artifactTransform.name, artifactTransform.gameObject);
             }
         }
     }

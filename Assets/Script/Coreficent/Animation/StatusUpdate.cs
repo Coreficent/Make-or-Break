@@ -25,8 +25,6 @@
 
             Artifact artifact = animator.gameObject.GetComponent<Artifact>();
             artifact.CurrentState = artifact.NextState;
-
-            artifact.Transitioning = false;
         }
 
         // OnStateMove is called right after Animator.OnAnimatorMove()
