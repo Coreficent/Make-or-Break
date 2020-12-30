@@ -1,5 +1,6 @@
 ﻿namespace Coreficent.Artifact
 {
+    using Coreficent.Main;
     using Coreficent.Utility;
     using System.Collections.Generic;
     using UnityEngine;
@@ -57,6 +58,7 @@
 
         public void Advance()
         {
+            Main.Transitioning = true;
             _animator.SetBool(_artifact.NextState, true);
         }
     }

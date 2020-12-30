@@ -7,6 +7,9 @@
 
     public class Main : MonoBehaviour
     {
+        public static bool Transitioning = false;
+
+
         [SerializeField] private Transform _artifactContainer;
 
         private readonly List<Artifact> _artifacts = new List<Artifact>();
@@ -22,12 +25,15 @@
         // game loop
         private void Update()
         {
-            foreach (Artifact artifact in _artifacts)
+            if (!Transitioning)
             {
-                if (artifact.CanAdvance())
+                foreach (Artifact artifact in _artifacts)
                 {
-                    artifact.Advance();
-                    return;
+                    if (artifact.CanAdvance())
+                    {
+                        artifact.Advance();
+                        return;
+                    }
                 }
             }
         }
