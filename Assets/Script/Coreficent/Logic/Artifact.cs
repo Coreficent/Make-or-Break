@@ -70,6 +70,13 @@
             Executor.Singleton.Transitioning = true;
             _animator.SetBool(_artifact.NextState, true);
         }
+
+        public void Finish()
+        {
+            DebugLogger.Log("finish");
+            CurrentState = NextState;
+            Executor.Singleton.Transitioning = false;
+        }
     }
 }
 
