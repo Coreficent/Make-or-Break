@@ -26,7 +26,7 @@
 
                     DebugLogger.ToDo("error handling in artifact");
 
-                    if (!Artifact.ArtifactLookup.ContainsKey(artifact) || Artifact.ArtifactLookup[artifact].CurrentState != state)
+                    if (!ArtifactExecutor.ArtifactLookup.ContainsKey(artifact) || ArtifactExecutor.ArtifactLookup[artifact].CurrentState != state)
                     {
                         meetConditions = false;
                     }

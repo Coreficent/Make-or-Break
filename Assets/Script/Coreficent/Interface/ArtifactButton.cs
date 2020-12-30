@@ -12,6 +12,7 @@
         protected override void Awake()
         {
             base.Awake();
+
             SanityCheck.Check(this, _activated, _creation);
 
             _button.interactable = _activated;
@@ -23,7 +24,7 @@
         {
             base.OnPointerClick(eventData);
 
-            Artifact artifact = Artifact.ArtifactLookup[_creation];
+            Artifact artifact = ArtifactExecutor.ArtifactLookup[_creation];
 
             artifact.NextState = "Origin";
             artifact.Advance();

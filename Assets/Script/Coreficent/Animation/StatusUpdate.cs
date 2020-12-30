@@ -1,7 +1,6 @@
 ﻿namespace Coreficent.Animation
 {
     using Coreficent.Artifact;
-    using Coreficent.Main;
     using Coreficent.Utility;
     using UnityEngine;
 
@@ -15,7 +14,7 @@
             Artifact artifact = animator.gameObject.GetComponent<Artifact>();
             artifact.CurrentState = artifact.NextState;
 
-            Main.Transitioning = false;
+            ArtifactExecutor.Transitioning = false;
         }
 
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

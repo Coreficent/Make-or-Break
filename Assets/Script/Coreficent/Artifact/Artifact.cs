@@ -1,14 +1,11 @@
 ﻿namespace Coreficent.Artifact
 {
-    using Coreficent.Main;
     using Coreficent.Utility;
     using System.Collections.Generic;
     using UnityEngine;
 
     public class Artifact : MonoBehaviour
     {
-        public static readonly Dictionary<string, Artifact> ArtifactLookup = new Dictionary<string, Artifact>();
-
         [SerializeField] private List<string> Predicates = new List<string>();
 
         public string CurrentState = "Dormancy";
@@ -58,7 +55,7 @@
 
         public void Advance()
         {
-            Main.Transitioning = true;
+            ArtifactExecutor.Transitioning = true;
             _animator.SetBool(_artifact.NextState, true);
         }
     }
