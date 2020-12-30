@@ -1514,6 +1514,7 @@ MonoBehaviour:
   - (Origin, []) -> Nova
   CurrentState: Dormancy
   NextState: Dormancy
+  Advanced: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,11 +1760,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Predicates:
-  - (Origin, [Sun:Nova]) -> Sapling
+  - (Origin, [Sun:Origin]) -> Sapling
   - (Sapling, [Water:River, Sun:SuperNova]) -> Cactus
   - (Sapling, [Water:River, Sun:Nova]) -> Bush
   CurrentState: Dormancy
   NextState: Dormancy
+  Advanced: 1
 --- !u!95 &1178319276
 Animator:
   serializedVersion: 3
@@ -2026,6 +2028,7 @@ MonoBehaviour:
   - (Origin, [Sun:Nova]) -> River
   CurrentState: Dormancy
   NextState: Dormancy
+  Advanced: 1
 --- !u!1 &1397437828
 GameObject:
   m_ObjectHideFlags: 0

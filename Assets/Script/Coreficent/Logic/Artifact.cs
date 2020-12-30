@@ -64,6 +64,12 @@
             Executor.Singleton.Transitioning = true;
             _animator.SetBool(_artifact.NextState, true);
         }
+
+        public void Originate()
+        {
+            Executor.Singleton.Transitioning = true;
+            _animator.SetBool(_artifact.NextState, true);
+        }
     }
 }
 
