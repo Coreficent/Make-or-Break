@@ -1,49 +1,71 @@
 ﻿namespace Coreficent.Interface
 {
     using Coreficent.Utility;
-    using System.Collections;
-    using System.Collections.Generic;
     using UnityEngine;
     using UnityEngine.EventSystems;
+    using UnityEngine.UI;
 
     public class SpriteButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
-        private Animator _animator;
-
-        private void Start()
+        protected Animator _animator;
+        protected Button _button;
+        
+        protected virtual void Awake()
         {
             _animator = GetComponent<Animator>();
+            _button = GetComponent<Button>();
 
             SanityCheck.Check(this, _animator);
-        }
 
-        private void Update()
-        {
-
+            DebugLogger.Awake(this);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            DebugLogger.Log("on enter sprite button");
-            _animator.SetBool("Enter", true);
-            _animator.SetBool("Exit", false);
+            if (_button.interactable)
+            {
+                DebugLogger.Log("on enter sprite button");
+                EnterAnimation();
+            }
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
             DebugLogger.Log("on exit sprite button");
-            _animator.SetBool("Enter", false);
-            _animator.SetBool("Exit", true);
+            ExitAnimation();
         }
 
-        public void OnPointerClick(PointerEventData eventData)
+        public virtual void OnPointerClick(PointerEventData eventData)
         {
-            if (eventData.button == PointerEventData.InputButton.Left)
-                Debug.Log("Left click");
-            else if (eventData.button == PointerEventData.InputButton.Middle)
-                Debug.Log("Middle click");
-            else if (eventData.button == PointerEventData.InputButton.Right)
-                Debug.Log("Right click");
+            switch (eventData.button)
+            {
+                case (PointerEventData.InputButton.Left):
+                    Debug.Log("Left click");
+                    ExitAnimation();
+                    _button.interactable = false;
+                    break;
+                case (PointerEventData.InputButton.Middle):
+                    Debug.Log("Middle click");
+                    break;
+                case (PointerEventData.InputButton.Right):
+                    Debug.Log("Right click");
+                    break;
+                default:
+                    Debug.Log("Unexpected mouse click");
+                    break;
+            }
+        }
+
+        private void EnterAnimation()
+        {
+            _animator.SetBool("Enter", true);
+            _animator.SetBool("Exit", false);
+        }
+
+        private void ExitAnimation()
+        {
+            _animator.SetBool("Enter", false);
+            _animator.SetBool("Exit", true);
         }
     }
 }

@@ -11,7 +11,18 @@
         {
             Output("Todo", message);
         }
-
+        public static void Awake(object message)
+        {
+            Initialize("Awake", message);
+        }
+        public static void Start(object message)
+        {
+            Initialize("Start", message);
+        }
+        public static void Initialize(string name, object message)
+        {
+            Log("Initialized" + _delimiter + name, message);
+        }
         public static void Log(string name, object message)
         {
             Log(name + _delimiter + message);

@@ -19,7 +19,7 @@
         {
             SanityCheck.Check(this, _artifactContainer);
             ConstructLookup();
-            DebugLogger.Log("Main initialized: started");
+            DebugLogger.Start(this);
         }
 
         // game loop

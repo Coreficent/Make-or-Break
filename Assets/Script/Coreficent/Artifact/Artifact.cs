@@ -64,7 +64,7 @@
 
             DebugLogger.Log("Finishing Predicates for" + " " + name);
 
-            DebugLogger.Log("Artifact initialized: awoken");
+            DebugLogger.Awake(this);
         }
 
         public bool CanAdvance(Dictionary<string, Artifact> _artifactLookup)

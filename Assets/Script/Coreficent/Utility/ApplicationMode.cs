@@ -17,7 +17,7 @@
         private void Awake()
         {
             DebugMode = _mode;
-            DebugLogger.Log("ApplicationMode initialized: awoken");
+            DebugLogger.Awake(this);
         }
     }
 }
