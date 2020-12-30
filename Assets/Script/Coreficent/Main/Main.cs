@@ -10,7 +10,6 @@
         [SerializeField] private Transform _artifactContainer;
 
         private readonly List<Artifact> _artifacts = new List<Artifact>();
-        private bool _pendingAnimation = false;
 
         // initializer
         private void Start()
@@ -23,18 +22,13 @@
         // game loop
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1) || _pendingAnimation)
+            foreach (Artifact artifact in _artifacts)
             {
-                foreach (Artifact artifact in _artifacts)
+                if (artifact.CanAdvance())
                 {
-                    if (artifact.CanAdvance())
-                    {
-                        _pendingAnimation = true;
-                        artifact.Advance();
-                        return;
-                    }
+                    artifact.Advance();
+                    return;
                 }
-                _pendingAnimation = false;
             }
         }
 
