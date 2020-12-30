@@ -871,7 +871,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'SX: Add a minigame where the "tree" can become a bush or a cactus.'
+  m_Text: 'SX: Add a minigame where the "tree" can become a bush or a cactus.
+
+    Let
+    me know what you think. :)'
 --- !u!222 &434597935
 CanvasRenderer:
   m_ObjectHideFlags: 0
