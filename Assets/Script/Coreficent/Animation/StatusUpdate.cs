@@ -14,7 +14,7 @@
             Artifact artifact = animator.gameObject.GetComponent<Artifact>();
             artifact.CurrentState = artifact.NextState;
 
-            ArtifactExecutor.Transitioning = false;
+            ArtifactExecutor.Singleton.Transitioning = false;
         }
 
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

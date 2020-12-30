@@ -7,8 +7,8 @@
     {
         public static ArtifactExecutor Singleton = new ArtifactExecutor();
 
-        public static Dictionary<string, Artifact> ArtifactLookup = new Dictionary<string, Artifact>();
-        public static bool Transitioning = false;
+        public Dictionary<string, Artifact> ArtifactLookup = new Dictionary<string, Artifact>();
+        public bool Transitioning = false;
 
         private List<Artifact> _artifacts = new List<Artifact>();
 
@@ -17,7 +17,7 @@
             foreach (Transform artifactTransform in artifactContainer)
             {
                 Artifact artifact = artifactTransform.GetComponent<Artifact>();
-                
+
                 _artifacts.Add(artifact);
                 ArtifactLookup.Add(artifactTransform.name, artifact);
             }

@@ -6,8 +6,8 @@
 
     public class Predicate
     {
-        public readonly string CurrentState;
         public readonly List<Tuple<string, string>> Conditions;
+        public readonly string CurrentState;
         public readonly string NextState;
 
         public bool MeetConditions
@@ -26,7 +26,7 @@
 
                     DebugLogger.ToDo("error handling in artifact");
 
-                    if (!ArtifactExecutor.ArtifactLookup.ContainsKey(artifact) || ArtifactExecutor.ArtifactLookup[artifact].CurrentState != state)
+                    if (!ArtifactExecutor.Singleton.ArtifactLookup.ContainsKey(artifact) || ArtifactExecutor.Singleton.ArtifactLookup[artifact].CurrentState != state)
                     {
                         meetConditions = false;
                     }
