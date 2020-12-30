@@ -10,8 +10,8 @@
 
         [SerializeField] private List<string> Predicates = new List<string>();
 
-        public string CurrentState = "Origin";
-        public string NextState = "Origin";
+        public string CurrentState = "Dormancy";
+        public string NextState = "Dormancy";
 
         // the format is: (CurrentState, [ArtifactA:State, ArtifactA:State]) -> NextState
         private readonly List<Predicate> _predicates = new List<Predicate>();
@@ -27,7 +27,7 @@
             SanityCheck.Check(this, _animator, _artifact);
 
             DebugLogger.ToDo("error handling in artifact");
-            
+
 
             DebugLogger.Log("Parsing Predicates for" + " " + name);
 
@@ -45,13 +45,10 @@
         {
             foreach (Predicate predicate in _predicates)
             {
-                if (predicate.CurrentState == CurrentState)
+                if (predicate.CurrentState == CurrentState && predicate.MeetConditions)
                 {
-                    if (predicate.MeetConditions)
-                    {
-                        NextState = predicate.NextState;
-                        return true;
-                    }
+                    NextState = predicate.NextState;
+                    return true;
                 }
             }
 

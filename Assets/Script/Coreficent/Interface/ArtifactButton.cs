@@ -1,5 +1,6 @@
 ﻿namespace Coreficent.Interface
 {
+    using Coreficent.Artifact;
     using Coreficent.Utility;
     using UnityEngine;
     using UnityEngine.EventSystems;
@@ -7,11 +8,11 @@
     public class ArtifactButton : SpriteButton
     {
         [SerializeField] private bool _activated;
-        private string _predicate;
+        [SerializeField] private string _creation;
         protected override void Awake()
         {
             base.Awake();
-            SanityCheck.Check(this, _activated);
+            SanityCheck.Check(this, _activated, _creation);
 
             _button.interactable = _activated;
 
@@ -21,6 +22,11 @@
         public override void OnPointerClick(PointerEventData eventData)
         {
             base.OnPointerClick(eventData);
+
+            Artifact artifact = Artifact.ArtifactLookup[_creation];
+
+            artifact.NextState = "Origin";
+            artifact.Advance();
         }
     }
 }

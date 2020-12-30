@@ -10,7 +10,6 @@
         [SerializeField] private Transform _artifactContainer;
 
         private readonly List<Artifact> _artifacts = new List<Artifact>();
-
         private bool _pendingAnimation = false;
 
         // initializer
