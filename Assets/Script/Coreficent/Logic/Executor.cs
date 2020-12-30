@@ -3,9 +3,9 @@
     using System.Collections.Generic;
     using UnityEngine;
 
-    public class ArtifactExecutor
+    public class Executor
     {
-        public static ArtifactExecutor Singleton = new ArtifactExecutor();
+        public static Executor Singleton = new Executor();
 
         public Dictionary<string, Artifact> ArtifactLookup = new Dictionary<string, Artifact>();
         public bool Transitioning = false;

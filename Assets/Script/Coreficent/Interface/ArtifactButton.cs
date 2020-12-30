@@ -24,7 +24,7 @@
         {
             base.OnPointerClick(eventData);
 
-            Artifact artifact = ArtifactExecutor.Singleton.ArtifactLookup[_creation];
+            Artifact artifact = Executor.Singleton.ArtifactLookup[_creation];
 
             artifact.NextState = "Origin";
             artifact.Advance();

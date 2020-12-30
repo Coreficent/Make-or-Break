@@ -13,7 +13,7 @@
         {
             SanityCheck.Check(this, _artifactContainer);
 
-            ArtifactExecutor.Singleton.Initialize(_artifactContainer);
+            Executor.Singleton.Initialize(_artifactContainer);
 
             DebugLogger.Start(this);
         }
@@ -21,7 +21,7 @@
         // game loop
         private void Update()
         {
-            ArtifactExecutor.Singleton.Run();
+            Executor.Singleton.Run();
         }
     }
 }
