@@ -5,7 +5,8 @@
 
     public class ArtifactExecutor
     {
-        
+        public static ArtifactExecutor Singleton = new ArtifactExecutor();
+
         public static Dictionary<string, Artifact> ArtifactLookup = new Dictionary<string, Artifact>();
         public static bool Transitioning = false;
 

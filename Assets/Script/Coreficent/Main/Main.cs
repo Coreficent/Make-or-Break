@@ -8,15 +8,12 @@
     {
         [SerializeField] private Transform _artifactContainer;
 
-
-        private ArtifactExecutor _artifactExecutor = new ArtifactExecutor();
-
         // initializer
         private void Start()
         {
             SanityCheck.Check(this, _artifactContainer);
 
-            _artifactExecutor.Initialize(_artifactContainer);
+            ArtifactExecutor.Singleton.Initialize(_artifactContainer);
 
             DebugLogger.Start(this);
         }
@@ -24,8 +21,7 @@
         // game loop
         private void Update()
         {
-            _artifactExecutor.Run();
+            ArtifactExecutor.Singleton.Run();
         }
-
     }
 }
