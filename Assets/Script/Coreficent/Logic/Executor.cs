@@ -8,10 +8,25 @@
         public static Executor Singleton = new Executor();
 
         public Dictionary<string, Artifact> ArtifactLookup = new Dictionary<string, Artifact>();
-        public bool Transitioning = false;
-        public bool TransitionComplete = true;
+        public bool _transitioning = false;
 
         private List<Artifact> _artifacts = new List<Artifact>();
+
+        public bool Transitioning
+        {
+            get
+            {
+                foreach (Artifact artifact in _artifacts)
+                {
+                    if (artifact.Transitioning)
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
+
 
         public void Initialize(Transform artifactContainer)
         {
@@ -40,12 +55,10 @@
                 {
                     if (artifact.CanAdvance())
                     {
-                        TransitionComplete = false;
                         artifact.Advance();
                         return;
                     }
                 }
-                TransitionComplete = true;
             }
         }
     }

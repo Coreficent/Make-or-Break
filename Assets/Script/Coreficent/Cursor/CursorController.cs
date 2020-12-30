@@ -18,7 +18,7 @@
 
         protected void Update()
         {
-            Cursor.SetCursor(Executor.Singleton.TransitionComplete ? _readyCursor : _busyCursor, Vector2.zero, cursorMode);
+            Cursor.SetCursor(Executor.Singleton.Transitioning ? _busyCursor : _readyCursor, Vector2.zero, cursorMode);
         }
     }
 

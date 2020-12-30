@@ -11,7 +11,9 @@
         public string CurrentState = "Dormancy";
         public string NextState = "Dormancy";
 
+        public bool Transitioning = false;
         public bool Advanced = true;
+        
 
         // the format is: (CurrentState, [ArtifactA:State, ArtifactA:State]) -> NextState
         private readonly List<Predicate> _predicates = new List<Predicate>();
@@ -61,13 +63,7 @@
         public void Advance()
         {
             Advanced = true;
-            Executor.Singleton.Transitioning = true;
-            _animator.SetBool(_artifact.NextState, true);
-        }
-
-        public void Originate()
-        {
-            Executor.Singleton.Transitioning = true;
+            Transitioning = true;
             _animator.SetBool(_artifact.NextState, true);
         }
 
@@ -75,7 +71,7 @@
         {
             DebugLogger.Log("finish");
             CurrentState = NextState;
-            Executor.Singleton.Transitioning = false;
+            Transitioning = false;
         }
     }
 }
