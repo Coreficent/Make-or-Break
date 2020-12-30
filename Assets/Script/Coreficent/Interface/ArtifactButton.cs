@@ -24,6 +24,8 @@
         {
             base.OnPointerClick(eventData);
 
+            Executor.Singleton.ResetAdvancedState();
+
             Artifact artifact = Executor.Singleton.ArtifactLookup[_creation];
 
             artifact.NextState = "Origin";

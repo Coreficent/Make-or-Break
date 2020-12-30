@@ -11,6 +11,8 @@
         public string CurrentState = "Dormancy";
         public string NextState = "Dormancy";
 
+        public bool Advanced = true;
+
         // the format is: (CurrentState, [ArtifactA:State, ArtifactA:State]) -> NextState
         private readonly List<Predicate> _predicates = new List<Predicate>();
 
@@ -41,12 +43,15 @@
 
         public bool CanAdvance()
         {
-            foreach (Predicate predicate in _predicates)
+            if (!Advanced)
             {
-                if (predicate.CurrentState == CurrentState && predicate.MeetConditions)
+                foreach (Predicate predicate in _predicates)
                 {
-                    NextState = predicate.NextState;
-                    return true;
+                    if (predicate.CurrentState == CurrentState && predicate.MeetConditions)
+                    {
+                        NextState = predicate.NextState;
+                        return true;
+                    }
                 }
             }
 
@@ -55,6 +60,7 @@
 
         public void Advance()
         {
+            Advanced = true;
             _animator.SetBool(_artifact.NextState, true);
         }
     }

@@ -23,6 +23,14 @@
             }
         }
 
+        public void ResetAdvancedState()
+        {
+            foreach (Artifact artifact in _artifacts)
+            {
+                artifact.Advanced = false;
+            }
+        }
+
         public void Run()
         {
             if (!Transitioning)
