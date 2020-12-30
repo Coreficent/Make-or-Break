@@ -1761,8 +1761,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Predicates:
   - (Origin, [Sun:Origin]) -> Sapling
-  - (Sapling, [Water:River, Sun:SuperNova]) -> Cactus
-  - (Sapling, [Water:River, Sun:Nova]) -> Bush
+  - (Sapling, [Sun:Nova]) -> Cactus
+  - (Sapling, [Water:River]) -> Bush
   CurrentState: Dormancy
   NextState: Dormancy
   Advanced: 1
@@ -2025,7 +2025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Predicates:
-  - (Origin, [Sun:Nova]) -> River
+  - (Origin, []) -> River
   CurrentState: Dormancy
   NextState: Dormancy
   Advanced: 1
