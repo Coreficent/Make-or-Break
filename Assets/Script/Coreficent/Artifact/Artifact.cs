@@ -55,7 +55,6 @@
 
         public void Advance()
         {
-            ArtifactExecutor.Transitioning = true;
             _animator.SetBool(_artifact.NextState, true);
         }
     }
