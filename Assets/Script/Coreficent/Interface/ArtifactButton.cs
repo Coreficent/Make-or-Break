@@ -1,6 +1,6 @@
 ﻿namespace Coreficent.Interface
 {
-    using Coreficent.Artifact;
+    using Coreficent.Logic;
     using Coreficent.Utility;
     using UnityEngine;
     using UnityEngine.EventSystems;

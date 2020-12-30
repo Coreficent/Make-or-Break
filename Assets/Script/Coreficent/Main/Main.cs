@@ -1,6 +1,6 @@
 ﻿namespace Coreficent.Main
 {
-    using Coreficent.Artifact;
+    using Coreficent.Logic;
     using Coreficent.Utility;
     using UnityEngine;
 

@@ -1,4 +1,4 @@
-﻿namespace Coreficent.Artifact
+﻿namespace Coreficent.Logic
 {
     using Coreficent.Utility;
     using System.Collections.Generic;

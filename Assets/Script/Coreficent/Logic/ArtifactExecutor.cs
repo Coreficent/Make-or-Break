@@ -1,4 +1,4 @@
-﻿namespace Coreficent.Artifact
+﻿namespace Coreficent.Logic
 {
     using System.Collections.Generic;
     using UnityEngine;
