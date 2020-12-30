@@ -61,6 +61,7 @@
         public void Advance()
         {
             Advanced = true;
+            Executor.Singleton.Transitioning = true;
             _animator.SetBool(_artifact.NextState, true);
         }
     }

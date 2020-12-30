@@ -40,7 +40,6 @@
                     if (artifact.CanAdvance())
                     {
                         artifact.Advance();
-                        Transitioning = true;
                         return;
                     }
                 }
