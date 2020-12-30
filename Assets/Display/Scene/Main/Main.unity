@@ -852,7 +852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.007976532, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -871,7 +871,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'SX: Button Updates.'
+  m_Text: 'SX: Add a minigame where the "tree" can become a bush or a cactus.'
 --- !u!222 &434597935
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1551,7 +1551,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1761,8 +1761,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Predicates:
   - (Origin, [Sun:Origin]) -> Sapling
-  - (Sapling, [Sun:Nova]) -> Cactus
+  - (Origin, [Water:Origin]) -> Sapling
   - (Sapling, [Water:River]) -> Bush
+  - (Sapling, [Sun:Nova]) -> Cactus
   CurrentState: Dormancy
   NextState: Dormancy
   Advanced: 1
@@ -1927,17 +1928,17 @@ PrefabInstance:
     - target: {fileID: 6850883634794573661, guid: 6bc1eecff2b246c4da9a2fc87103f89e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.40926826
+      value: -2.89
       objectReference: {fileID: 0}
     - target: {fileID: 6850883634794573661, guid: 6bc1eecff2b246c4da9a2fc87103f89e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 6850883634794573661, guid: 6bc1eecff2b246c4da9a2fc87103f89e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.3616457
+      value: -19.17
       objectReference: {fileID: 0}
     - target: {fileID: 6850883634794573661, guid: 6bc1eecff2b246c4da9a2fc87103f89e,
         type: 3}
@@ -2226,17 +2227,17 @@ PrefabInstance:
     - target: {fileID: 260716600937460051, guid: 560ffc0e6d2b41948bc610ea4723b260,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.40926826
+      value: -2.89
       objectReference: {fileID: 0}
     - target: {fileID: 260716600937460051, guid: 560ffc0e6d2b41948bc610ea4723b260,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 260716600937460051, guid: 560ffc0e6d2b41948bc610ea4723b260,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.3616457
+      value: -19.17
       objectReference: {fileID: 0}
     - target: {fileID: 260716600937460051, guid: 560ffc0e6d2b41948bc610ea4723b260,
         type: 3}
@@ -2361,17 +2362,17 @@ PrefabInstance:
     - target: {fileID: 5859132634834570839, guid: bf78c826a5333354eabec92f553dcd97,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4092684
+      value: 3.36
       objectReference: {fileID: 0}
     - target: {fileID: 5859132634834570839, guid: bf78c826a5333354eabec92f553dcd97,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 5859132634834570839, guid: bf78c826a5333354eabec92f553dcd97,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.3616457
+      value: -19.17
       objectReference: {fileID: 0}
     - target: {fileID: 5859132634834570839, guid: bf78c826a5333354eabec92f553dcd97,
         type: 3}
