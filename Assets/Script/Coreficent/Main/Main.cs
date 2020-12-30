@@ -9,7 +9,6 @@
     {
         [SerializeField] private Transform _artifactContainer;
 
-        private readonly Dictionary<string, Artifact> _artifactLookup = new Dictionary<string, Artifact>();
         private readonly List<Artifact> _artifacts = new List<Artifact>();
 
         private bool _pendingAnimation = false;
@@ -29,7 +28,7 @@
             {
                 foreach (Artifact artifact in _artifacts)
                 {
-                    if (artifact.CanAdvance(_artifactLookup))
+                    if (artifact.CanAdvance())
                     {
                         _pendingAnimation = true;
                         artifact.Advance();
@@ -47,7 +46,7 @@
                 Artifact artifact = artifactTransform.GetComponent<Artifact>();
 
                 _artifacts.Add(artifact);
-                _artifactLookup.Add(artifactTransform.name, artifact);
+                Predicate.ArtifactLookup.Add(artifactTransform.name, artifact);
             }
         }
     }

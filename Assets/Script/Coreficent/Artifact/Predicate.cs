@@ -6,9 +6,36 @@
 
     public class Predicate
     {
+        public static readonly Dictionary<string, Artifact> ArtifactLookup = new Dictionary<string, Artifact>();
+
         public readonly string CurrentState;
         public readonly List<Tuple<string, string>> Conditions;
         public readonly string NextState;
+
+        public bool MeetConditions
+        {
+            get
+            {
+                bool meetConditions = true;
+
+                foreach (Tuple<string, string> condition in Conditions)
+                {
+                    string artifact = condition.Item1;
+                    string state = condition.Item2;
+
+                    DebugLogger.Log("condition artifact", artifact);
+                    DebugLogger.Log("condition state", state);
+
+                    DebugLogger.ToDo("error handling in artifact");
+
+                    if (!ArtifactLookup.ContainsKey(artifact) || ArtifactLookup[artifact].CurrentState != state)
+                    {
+                        meetConditions = false;
+                    }
+                }
+                return meetConditions;
+            }
+        }
 
         public Predicate(string predicate)
         {
@@ -42,29 +69,6 @@
             CurrentState = currentState;
             Conditions = conditions;
             NextState = nextState;
-        }
-
-        public bool MeetConditions(Dictionary<string, Artifact> _artifactLookup)
-        {
-            bool meetConditions = true;
-
-            foreach (Tuple<string, string> condition in Conditions)
-            {
-                string artifact = condition.Item1;
-                string state = condition.Item2;
-
-                DebugLogger.Log("condition artifact", artifact);
-                DebugLogger.Log("condition state", state);
-
-                DebugLogger.ToDo("error handling in artifact");
-
-                if (!_artifactLookup.ContainsKey(artifact) || _artifactLookup[artifact].CurrentState != state)
-                {
-                    meetConditions = false;
-                }
-            }
-
-            return meetConditions;
         }
     }
 }

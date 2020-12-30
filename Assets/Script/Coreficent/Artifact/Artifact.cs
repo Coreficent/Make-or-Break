@@ -39,13 +39,13 @@
             DebugLogger.Awake(this);
         }
 
-        public bool CanAdvance(Dictionary<string, Artifact> artifactLookup)
+        public bool CanAdvance()
         {
             foreach (Predicate predicate in _predicates)
             {
                 if (predicate.CurrentState == CurrentState)
                 {
-                    if (predicate.MeetConditions(artifactLookup))
+                    if (predicate.MeetConditions)
                     {
                         NextState = predicate.NextState;
                         return true;
