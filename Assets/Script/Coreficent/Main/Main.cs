@@ -46,7 +46,7 @@
                 Artifact artifact = artifactTransform.GetComponent<Artifact>();
 
                 _artifacts.Add(artifact);
-                Predicate.ArtifactLookup.Add(artifactTransform.name, artifact);
+                Artifact.ArtifactLookup.Add(artifactTransform.name, artifact);
             }
         }
     }

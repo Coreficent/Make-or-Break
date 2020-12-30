@@ -6,6 +6,8 @@
 
     public class Artifact : MonoBehaviour
     {
+        public static readonly Dictionary<string, Artifact> ArtifactLookup = new Dictionary<string, Artifact>();
+
         [SerializeField] private List<string> Predicates = new List<string>();
 
         public string CurrentState = "Origin";

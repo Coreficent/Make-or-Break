@@ -6,8 +6,6 @@
 
     public class Predicate
     {
-        public static readonly Dictionary<string, Artifact> ArtifactLookup = new Dictionary<string, Artifact>();
-
         public readonly string CurrentState;
         public readonly List<Tuple<string, string>> Conditions;
         public readonly string NextState;
@@ -28,7 +26,7 @@
 
                     DebugLogger.ToDo("error handling in artifact");
 
-                    if (!ArtifactLookup.ContainsKey(artifact) || ArtifactLookup[artifact].CurrentState != state)
+                    if (!Artifact.ArtifactLookup.ContainsKey(artifact) || Artifact.ArtifactLookup[artifact].CurrentState != state)
                     {
                         meetConditions = false;
                     }
