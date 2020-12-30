@@ -9,6 +9,7 @@
 
         public Dictionary<string, Artifact> ArtifactLookup = new Dictionary<string, Artifact>();
         public bool Transitioning = false;
+        public bool TransitionComplete = true;
 
         private List<Artifact> _artifacts = new List<Artifact>();
 
@@ -39,10 +40,12 @@
                 {
                     if (artifact.CanAdvance())
                     {
+                        TransitionComplete = false;
                         artifact.Advance();
                         return;
                     }
                 }
+                TransitionComplete = true;
             }
         }
     }
