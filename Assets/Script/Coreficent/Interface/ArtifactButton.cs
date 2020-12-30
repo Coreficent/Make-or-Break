@@ -22,14 +22,17 @@
 
         public override void OnPointerClick(PointerEventData eventData)
         {
-            base.OnPointerClick(eventData);
+            if (!Executor.Singleton.Transitioning)
+            {
+                base.OnPointerClick(eventData);
 
-            Executor.Singleton.ResetAdvancedState();
+                Executor.Singleton.ResetAdvancedState();
 
-            Artifact artifact = Executor.Singleton.ArtifactLookup[_creation];
+                Artifact artifact = Executor.Singleton.ArtifactLookup[_creation];
 
-            artifact.NextState = "Origin";
-            artifact.Advance();
+                artifact.NextState = "Origin";
+                artifact.Advance();
+            }
         }
     }
 }
