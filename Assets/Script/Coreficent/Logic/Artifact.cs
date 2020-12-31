@@ -9,8 +9,8 @@
     {
         [SerializeField] private List<string> Predicates = new List<string>();
 
-        public string CurrentState = "Dormancy";
-        public string NextState = "Dormancy";
+        public string CurrentState = "HideLoop";
+        public string NextState = "HideLoop";
 
         public bool Transitioning = false;
         public bool Advanced = true;

@@ -1562,7 +1562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Predicates:
   - (Origin, [Water:Origin]) -> Dig
-  - (Dig, [Water:Origin]) -> Tunnel
+  - (Dig, [Water:Flow]) -> Tunnel
   CurrentState: Dormancy
   NextState: Dormancy
   Transitioning: 0
