@@ -23,7 +23,7 @@
 
         public override void OnPointerClick(PointerEventData eventData)
         {
-            if (CursorController.Singleton.CursorOn)
+            if (CursorController.Singleton.CursorOn && _button.interactable)
             {
                 base.OnPointerClick(eventData);
 
