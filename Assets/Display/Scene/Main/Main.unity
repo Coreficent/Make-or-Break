@@ -1067,7 +1067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _activated: 1
-  _creation: Sun
+  _creation: Person
 --- !u!1 &623804145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,6 +1564,7 @@ MonoBehaviour:
   - (Origin, []) -> Nova
   CurrentState: Dormancy
   NextState: Dormancy
+  Transitioning: 0
   Advanced: 1
 --- !u!1 &963194225
 GameObject:
@@ -1816,6 +1817,7 @@ MonoBehaviour:
   - (Sapling, [Sun:Nova]) -> Cactus
   CurrentState: Dormancy
   NextState: Dormancy
+  Transitioning: 0
   Advanced: 1
 --- !u!95 &1178319276
 Animator:
@@ -2079,6 +2081,7 @@ MonoBehaviour:
   - (Origin, []) -> River
   CurrentState: Dormancy
   NextState: Dormancy
+  Transitioning: 0
   Advanced: 1
 --- !u!1 &1397437828
 GameObject:
@@ -2332,7 +2335,7 @@ PrefabInstance:
     - target: {fileID: 1293738180267875038, guid: 560ffc0e6d2b41948bc610ea4723b260,
         type: 3}
       propertyPath: m_Name
-      value: Sun
+      value: Person
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 560ffc0e6d2b41948bc610ea4723b260, type: 3}
@@ -2467,7 +2470,7 @@ PrefabInstance:
     - target: {fileID: 6909244257773035390, guid: bf78c826a5333354eabec92f553dcd97,
         type: 3}
       propertyPath: m_Name
-      value: Tree
+      value: Plant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf78c826a5333354eabec92f553dcd97, type: 3}
@@ -2770,7 +2773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _activated: 1
-  _creation: Tree
+  _creation: Plant
 --- !u!95 &2007630618
 Animator:
   serializedVersion: 3

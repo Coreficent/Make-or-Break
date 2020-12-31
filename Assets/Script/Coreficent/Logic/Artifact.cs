@@ -14,7 +14,7 @@
 
         public bool Transitioning = false;
         public bool Advanced = true;
-        
+
 
         // the format is: (CurrentState, [ArtifactA:State, ArtifactA:State]) -> NextState
         private readonly List<Predicate> _predicates = new List<Predicate>();
@@ -75,10 +75,11 @@
             CurrentState = NextState;
             Transitioning = false;
 
-            if (Executor.Singleton.Run())
-            {
-                CursorController.Singleton.CursorOn = true;
-            }
+            //Executor.Singleton.Run();
+            //if (!Executor.Singleton.Transitioning)
+            //{
+            //    CursorController.Singleton.CursorOn = true;
+            //}
         }
     }
 }

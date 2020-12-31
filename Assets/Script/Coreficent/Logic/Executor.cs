@@ -15,7 +15,18 @@
         private bool _transitioning = false;
         public bool Transitioning
         {
-            get { return _transitioning; }
+            get
+            {
+                foreach (Artifact artifact in _artifacts)
+                {
+                    if (artifact.CanAdvance() || artifact.CurrentState != artifact.NextState)
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
         }
 
 
