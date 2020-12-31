@@ -1,5 +1,6 @@
 ﻿namespace Coreficent.Interface
 {
+    using Coreficent.Cursor;
     using Coreficent.Logic;
     using Coreficent.Utility;
     using UnityEngine;
@@ -22,7 +23,7 @@
 
         public override void OnPointerClick(PointerEventData eventData)
         {
-            if (!Executor.Singleton.Transitioning)
+            if (CursorController.Singleton.CursorOn)
             {
                 base.OnPointerClick(eventData);
 

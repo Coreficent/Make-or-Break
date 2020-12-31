@@ -75,6 +75,8 @@
             CurrentState = NextState;
             Transitioning = false;
 
+            CursorController.Singleton.CursorOn = true;
+
             //Executor.Singleton.Run();
             //if (!Executor.Singleton.Transitioning)
             //{
