@@ -8,6 +8,8 @@
 
     public class CursorController : MonoBehaviour
     {
+        public static CursorController Singleton;
+
         [SerializeField] private Texture2D _readyCursor;
         [SerializeField] private Texture2D _busyCursor;
 
@@ -15,10 +17,23 @@
 
         private Queue<bool> _averager = new Queue<bool>();
         private int _averageSize = 5;
+        private bool _cursorOn = true;
+        public bool CursorOn
+        {
+            get { return _cursorOn; }
+            set
+            {
+                _cursorOn = value;
+                DebugLogger.Log("cursor", _cursorOn);
+                Cursor.SetCursor(_cursorOn ? _readyCursor : _busyCursor, Vector2.zero, cursorMode);
+            }
+        }
 
         protected void Start()
         {
-            SanityCheck.Check(this, _readyCursor, _busyCursor);
+            Singleton = this;
+
+            SanityCheck.Check(this, _readyCursor, _busyCursor, Singleton);
 
             for (var i = 0; i < _averageSize; ++i)
             {
@@ -26,7 +41,7 @@
             }
         }
 
-        protected void Update()
+        protected void Update2222()
         {
             _averager.Dequeue();
             _averager.Enqueue(Executor.Singleton.Transitioning);

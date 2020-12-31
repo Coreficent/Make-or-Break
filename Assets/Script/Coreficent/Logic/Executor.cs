@@ -1,5 +1,6 @@
 ﻿namespace Coreficent.Logic
 {
+    using Coreficent.Cursor;
     using System.Collections.Generic;
     using UnityEngine;
 
@@ -8,23 +9,13 @@
         public static Executor Singleton = new Executor();
 
         public Dictionary<string, Artifact> ArtifactLookup = new Dictionary<string, Artifact>();
-        public bool _transitioning = false;
 
         private List<Artifact> _artifacts = new List<Artifact>();
 
+        private bool _transitioning = false;
         public bool Transitioning
         {
-            get
-            {
-                foreach (Artifact artifact in _artifacts)
-                {
-                    if (artifact.Transitioning)
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            }
+            get { return _transitioning; }
         }
 
 
@@ -47,16 +38,19 @@
             }
         }
 
-        public void Run()
+        public bool Run()
         {
             foreach (Artifact artifact in _artifacts)
             {
                 if (artifact.CanAdvance())
                 {
                     artifact.Advance();
-                    return;
+
+                    return false;
                 }
             }
+
+            return true;
         }
     }
 }

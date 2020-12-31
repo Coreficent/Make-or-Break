@@ -1,5 +1,6 @@
 ﻿namespace Coreficent.Logic
 {
+    using Coreficent.Cursor;
     using Coreficent.Utility;
     using System.Collections.Generic;
     using UnityEngine;
@@ -64,6 +65,7 @@
         {
             Advanced = true;
             Transitioning = true;
+            CursorController.Singleton.CursorOn = false;
             _animator.SetBool(_artifact.NextState, true);
         }
 
@@ -73,7 +75,10 @@
             CurrentState = NextState;
             Transitioning = false;
 
-            Executor.Singleton.Run();
+            if (Executor.Singleton.Run())
+            {
+                CursorController.Singleton.CursorOn = true;
+            }
         }
     }
 }
