@@ -1561,7 +1561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Predicates:
-  - (Origin, []) -> Nova
+  - (Origin, [Water:Origin]) -> Dig
   CurrentState: Dormancy
   NextState: Dormancy
   Transitioning: 0
