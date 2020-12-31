@@ -1562,6 +1562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Predicates:
   - (Origin, [Water:Origin]) -> Dig
+  - (Dig, [Water:Origin]) -> Tunnel
   CurrentState: Dormancy
   NextState: Dormancy
   Transitioning: 0
@@ -1810,11 +1811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4465a8445b79dc244b646ee134499baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Predicates:
-  - (Origin, [Sun:Origin]) -> Sapling
-  - (Origin, [Water:Origin]) -> Sapling
-  - (Sapling, [Water:River]) -> Bush
-  - (Sapling, [Sun:Nova]) -> Cactus
+  Predicates: []
   CurrentState: Dormancy
   NextState: Dormancy
   Transitioning: 0
@@ -2078,7 +2075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Predicates:
-  - (Origin, []) -> River
+  - (Origin, [Person:Dig]) -> Flow
   CurrentState: Dormancy
   NextState: Dormancy
   Transitioning: 0
