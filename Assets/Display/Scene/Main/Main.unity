@@ -1561,10 +1561,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Predicates:
-  - (Origin, [Water:Origin]) -> Dig
+  - (Originate, [Water:Originate]) -> Dig
   - (Dig, [Water:Flow]) -> Tunnel
-  CurrentState: Dormancy
-  NextState: Dormancy
+  CurrentState: HideAction
+  NextState: HideAction
   Transitioning: 0
   Advanced: 1
 --- !u!1 &963194225
@@ -1812,8 +1812,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Predicates: []
-  CurrentState: Dormancy
-  NextState: Dormancy
+  CurrentState: HideAction
+  NextState: HideAction
   Transitioning: 0
   Advanced: 1
 --- !u!95 &1178319276
@@ -2075,9 +2075,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Predicates:
-  - (Origin, [Person:Dig]) -> Flow
-  CurrentState: Dormancy
-  NextState: Dormancy
+  - (Originate, [Person:Dig]) -> Flow
+  CurrentState: HideAction
+  NextState: HideAction
   Transitioning: 0
   Advanced: 1
 --- !u!1 &1397437828

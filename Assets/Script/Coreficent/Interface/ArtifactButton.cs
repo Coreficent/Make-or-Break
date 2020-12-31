@@ -31,7 +31,7 @@
 
                 Artifact artifact = Executor.Singleton.ArtifactLookup[_creation];
 
-                artifact.NextState = "Origin";
+                artifact.NextState = "Originate";
                 artifact.Advance();
             }
         }
