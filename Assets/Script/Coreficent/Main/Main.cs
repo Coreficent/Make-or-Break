@@ -21,7 +21,7 @@
         // game loop
         private void Update()
         {
-            Executor.Singleton.Run();
+            // Executor.Singleton.Run();
         }
     }
 }

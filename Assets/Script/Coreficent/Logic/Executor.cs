@@ -49,15 +49,12 @@
 
         public void Run()
         {
-            if (!Transitioning)
+            foreach (Artifact artifact in _artifacts)
             {
-                foreach (Artifact artifact in _artifacts)
+                if (artifact.CanAdvance())
                 {
-                    if (artifact.CanAdvance())
-                    {
-                        artifact.Advance();
-                        return;
-                    }
+                    artifact.Advance();
+                    return;
                 }
             }
         }

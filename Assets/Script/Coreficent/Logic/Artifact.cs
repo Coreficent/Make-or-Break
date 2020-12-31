@@ -72,6 +72,8 @@
             DebugLogger.Log("finish");
             CurrentState = NextState;
             Transitioning = false;
+
+            Executor.Singleton.Run();
         }
     }
 }
