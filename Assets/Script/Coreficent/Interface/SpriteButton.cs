@@ -10,14 +10,14 @@
         protected Animator _animator;
         protected Button _button;
         
-        protected virtual void Awake()
+        protected virtual void Start()
         {
             _animator = GetComponent<Animator>();
             _button = GetComponent<Button>();
 
             SanityCheck.Check(this, _animator);
 
-            DebugLogger.Awake(this);
+            DebugLogger.Start(this);
         }
 
         public void OnPointerEnter(PointerEventData eventData)

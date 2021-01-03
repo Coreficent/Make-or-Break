@@ -22,7 +22,7 @@
         private Animator _animator;
         private Artifact _artifact;
 
-        private void Awake()
+        private void Start()
         {
             _animator = GetComponent<Animator>();
             _artifact = GetComponent<Artifact>();
@@ -41,7 +41,7 @@
 
             DebugLogger.Log("Finishing Predicates for" + " " + name);
 
-            DebugLogger.Awake(this);
+            DebugLogger.Start(this);
         }
 
         public bool CanAdvance()

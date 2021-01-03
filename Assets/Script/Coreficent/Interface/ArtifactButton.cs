@@ -10,15 +10,15 @@
     {
         [SerializeField] private bool _activated;
         [SerializeField] private string _creation;
-        protected override void Awake()
+        protected override void Start()
         {
-            base.Awake();
+            base.Start();
 
             SanityCheck.Check(this, _activated, _creation);
 
             _button.interactable = _activated;
 
-            DebugLogger.Awake(this);
+            DebugLogger.Start(this);
         }
 
         public override void OnPointerClick(PointerEventData eventData)
