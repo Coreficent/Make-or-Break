@@ -623,7 +623,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 283954943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 141dd50fb2aa5e94491ec519119e203d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3027dd4dbc6513b4091a902588d7f1d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 0
@@ -1462,8 +1462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a071af79021b84eba8a4f697e536a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _activated: 1
   _creation: Person
+  _round: 0
 --- !u!4 &545306133 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -595665027245366324, guid: 238c5e5a3bffd9743920254bd930c55c,
@@ -1548,8 +1548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a071af79021b84eba8a4f697e536a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _activated: 0
   _creation: Weather
+  _round: 2
 --- !u!95 &577052023
 Animator:
   serializedVersion: 3
@@ -7652,8 +7652,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a071af79021b84eba8a4f697e536a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _activated: 1
   _creation: Water
+  _round: 1
 --- !u!95 &1397437831
 Animator:
   serializedVersion: 3
@@ -8623,8 +8623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a071af79021b84eba8a4f697e536a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _activated: 1
   _creation: Plant
+  _round: 1
 --- !u!95 &2007630618
 Animator:
   serializedVersion: 3
@@ -8777,8 +8777,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a071af79021b84eba8a4f697e536a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _activated: 0
   _creation: Relic
+  _round: 2
 --- !u!95 &2021273172
 Animator:
   serializedVersion: 3
