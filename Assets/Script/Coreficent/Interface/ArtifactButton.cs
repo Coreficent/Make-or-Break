@@ -51,8 +51,6 @@
             foreach (ArtifactButton artifact in ArtifactButtons)
             {
                 artifact._button.interactable = artifact._round == Round;
-
-                DebugLogger.Log("hhh", _round, Round);
             }
         }
     }
