@@ -30,14 +30,17 @@
         }
 
 
-        public void Initialize(Transform artifactContainer)
+        public void Initialize(List<Transform> artifactContainers)
         {
-            foreach (Transform artifactTransform in artifactContainer)
+            foreach (Transform artifactContainer in artifactContainers)
             {
-                Artifact artifact = artifactTransform.GetComponent<Artifact>();
+                foreach (Transform artifactTransform in artifactContainer)
+                {
+                    Artifact artifact = artifactTransform.GetComponent<Artifact>();
 
-                _artifacts.Add(artifact);
-                ArtifactLookup.Add(artifactTransform.name, artifact);
+                    _artifacts.Add(artifact);
+                    ArtifactLookup.Add(artifactTransform.name, artifact);
+                }
             }
         }
 

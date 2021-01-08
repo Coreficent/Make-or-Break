@@ -2,11 +2,12 @@
 {
     using Coreficent.Logic;
     using Coreficent.Utility;
+    using System.Collections.Generic;
     using UnityEngine;
 
     public class Main : MonoBehaviour
     {
-        [SerializeField] private Transform _artifactContainer;
+        [SerializeField] private List<Transform> _artifactContainer = new List<Transform>();
 
         // initializer
         private void Start()

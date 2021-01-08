@@ -17,12 +17,31 @@
 
         protected void Update()
         {
-            _material.SetColor("_Color", _color);
+            SetColor(_color);
         }
 
         private void OnApplicationQuit()
         {
-            _material.SetColor("_Color", Color.white);
+            if(_material.shader.name == "Skybox/Cubemap")
+            {
+                SetColor(Color.gray);
+            }
+            else
+            {
+                SetColor(Color.white);
+            }
+        }
+
+        private void SetColor(Color color)
+        {
+            if (_material.shader.name == "Coreficent/Anime" || _material.shader.name == "Coreficent/PostProcessor")
+            {
+                _material.SetColor("_Color", color);
+            }
+            else if (_material.shader.name == "Skybox/Cubemap")
+            {
+                _material.SetColor("_Tint", color);
+            }
         }
     }
 }
