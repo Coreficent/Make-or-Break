@@ -24,8 +24,16 @@
 
         private void Start()
         {
+
+            DebugLogger.ToDo("remove following line after removing conceptual items");
             _animator = GetComponent<Animator>();
             _artifact = GetComponent<Artifact>();
+
+
+            if (_animator == null)
+            {
+                _animator = transform.Find("Display").GetComponent<Animator>();
+            }
 
             SanityCheck.Check(this, _animator, _artifact);
 
