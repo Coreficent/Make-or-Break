@@ -12,9 +12,6 @@ GameObject:
   - component: {fileID: 4950268563543046074}
   - component: {fileID: 4950268563543046075}
   - component: {fileID: 4950268563543046076}
-  - component: {fileID: 4950268563543046065}
-  - component: {fileID: 4950268563543046078}
-  - component: {fileID: 4950268563543046079}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -100,53 +97,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 3a0f3b53b441952478e5cd5d634c5647, type: 2}
---- !u!114 &4950268563543046065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4950268563543046072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4465a8445b79dc244b646ee134499baa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Predicates: []
-  CurrentState: HideLoop
-  NextState: HideLoop
-  Transitioning: 0
-  Advanced: 1
---- !u!95 &4950268563543046078
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4950268563543046072}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e529a3eed49fab7498f903acd2b40578, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4950268563543046079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4950268563543046072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af22dd6b15792aa448273e66444ac4f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: 3a0f3b53b441952478e5cd5d634c5647, type: 2}
-  _color: {r: 0, g: 0, b: 0, a: 0}

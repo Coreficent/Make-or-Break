@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9028760016767539644}
   - component: {fileID: 9028760016767539645}
-  - component: {fileID: 9028760016767539647}
-  - component: {fileID: 9028760016767539646}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -51,39 +49,6 @@ MonoBehaviour:
   NextState: HideLoop
   Transitioning: 0
   Advanced: 1
---- !u!95 &9028760016767539647
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9028760016767539643}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e069e71e49cf56f4bb4c6c5338a95fb0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &9028760016767539646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9028760016767539643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af22dd6b15792aa448273e66444ac4f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: e66113c6201f2184a839c9ab9fa89ce6, type: 2}
-  _color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &9028760017275565934
 GameObject:
   m_ObjectHideFlags: 0
