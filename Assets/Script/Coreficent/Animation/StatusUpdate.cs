@@ -20,8 +20,17 @@
         // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
         override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            DebugLogger.ToDo("cleanup");
             Artifact artifact = animator.gameObject.GetComponent<Artifact>();
-            artifact.Finish();
+
+            if (!artifact)
+            {
+                animator.transform.parent.GetComponent<Artifact>().Finish();
+            }
+            else
+            {
+                artifact.Finish();
+            }
         }
 
         // OnStateMove is called right after Animator.OnAnimatorMove()
