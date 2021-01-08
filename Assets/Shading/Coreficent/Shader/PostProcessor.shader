@@ -2,6 +2,7 @@
 {
     Properties
     {
+        _Color ("Color", Color) = (1.0, 1.0, 1.0, 1.0)
         _MainTex ("Texture", 2D) = "white" {}
     }
     SubShader
@@ -16,6 +17,8 @@
             #pragma fragment frag
 
             #include "UnityCG.cginc"
+
+            fixed4 _Color;
 
             struct appdata
             {
@@ -41,9 +44,8 @@
 
             fixed4 frag (v2f i) : SV_Target
             {
-                fixed4 col = tex2D(_MainTex, i.uv);
-                // just invert the colors
-                col.rgb = 1 - col.rgb;
+                fixed4 col = tex2D(_MainTex, i.uv) * _Color * 2.0;;
+
                 return col;
             }
             ENDCG
