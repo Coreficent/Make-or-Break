@@ -317,7 +317,7 @@ PrefabInstance:
     - target: {fileID: 3865724826957148758, guid: cb2500a57f0515347afbbe43fb19ce1b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3865724826957148758, guid: cb2500a57f0515347afbbe43fb19ce1b,
         type: 3}
@@ -1652,7 +1652,7 @@ MonoBehaviour:
   - HumanA
   - SeedA
   - SeedB
-  - Camera
+  - Light
   - Planet
   - SaplingA
   - SaplingB
@@ -1867,7 +1867,7 @@ Transform:
   m_Children:
   - {fileID: 1331176467}
   m_Father: {fileID: 1312269632}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &578147850
 MonoBehaviour:
@@ -2020,7 +2020,7 @@ PrefabInstance:
     - target: {fileID: 3865724826957148758, guid: cb2500a57f0515347afbbe43fb19ce1b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3865724826957148758, guid: cb2500a57f0515347afbbe43fb19ce1b,
         type: 3}
@@ -2244,7 +2244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _creations:
-  - LightBlocker
+  - Blocker
   - Sun
   - HumanB
   _round: 1
@@ -7771,7 +7771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _creations:
-  - LightBlocker
+  - Blocker
   _round: 1
 --- !u!95 &1146291333
 Animator:
@@ -7928,7 +7928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Predicates:
-  - (Originate, [Sun:Originate]) -> Greenen
+  - (Originate, [Sun:Originate]) -> Sunshine
   CurrentState: HideLoop
   NextState: HideLoop
   Transitioning: 0
@@ -8008,9 +8008,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2064987614}
+  - {fileID: 134541453}
   - {fileID: 1157700740}
   - {fileID: 578147849}
-  - {fileID: 134541453}
   m_Father: {fileID: 163443907}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8263,10 +8263,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1509061582}
   - {fileID: 217754134}
   - {fileID: 2077789696}
   - {fileID: 1847469961}
-  - {fileID: 1509061582}
   - {fileID: 755339177}
   - {fileID: 1879215779}
   - {fileID: 1715528954}
@@ -8997,7 +8997,7 @@ PrefabInstance:
     - target: {fileID: 7423803458536493241, guid: 8be80085da8cbd349b70cee41f9cdaf1,
         type: 3}
       propertyPath: m_Name
-      value: DisplayTemp
+      value: WalkerDisplay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8be80085da8cbd349b70cee41f9cdaf1, type: 3}
@@ -9517,7 +9517,7 @@ GameObject:
   - component: {fileID: 2064987616}
   - component: {fileID: 2064987615}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9921,7 +9921,7 @@ PrefabInstance:
     - target: {fileID: 7423803458536493241, guid: 8be80085da8cbd349b70cee41f9cdaf1,
         type: 3}
       propertyPath: m_Name
-      value: DisplayTemp
+      value: WalkerDisplay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8be80085da8cbd349b70cee41f9cdaf1, type: 3}
@@ -9990,7 +9990,7 @@ PrefabInstance:
     - target: {fileID: 3261842292927031966, guid: 51c1996ead4b2bb40b9cb98b53e14aef,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3261842292927031966, guid: 51c1996ead4b2bb40b9cb98b53e14aef,
         type: 3}
@@ -10079,7 +10079,7 @@ PrefabInstance:
     - target: {fileID: 3865724826957148758, guid: cb2500a57f0515347afbbe43fb19ce1b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3865724826957148758, guid: cb2500a57f0515347afbbe43fb19ce1b,
         type: 3}
@@ -10287,7 +10287,7 @@ PrefabInstance:
     - target: {fileID: 8365881781792650714, guid: 0df4fd8ae69425d459aa6291efad7582,
         type: 3}
       propertyPath: m_Name
-      value: LightBlocker
+      value: Blocker
       objectReference: {fileID: 0}
     - target: {fileID: 8365881781792650718, guid: 0df4fd8ae69425d459aa6291efad7582,
         type: 3}
@@ -10327,7 +10327,7 @@ PrefabInstance:
     - target: {fileID: 8365881781792650718, guid: 0df4fd8ae69425d459aa6291efad7582,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8365881781792650718, guid: 0df4fd8ae69425d459aa6291efad7582,
         type: 3}
@@ -10396,7 +10396,7 @@ PrefabInstance:
     - target: {fileID: 9028760016767539644, guid: ada7341c815b8b4499cbf2f2b87590fa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9028760016767539644, guid: ada7341c815b8b4499cbf2f2b87590fa,
         type: 3}
