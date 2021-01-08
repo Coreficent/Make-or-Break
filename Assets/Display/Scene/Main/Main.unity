@@ -8030,6 +8030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Predicates:
   - (Originate, [Sun:Originate]) -> Sunshine
+  - (Originate, [Moon:Originate]) -> Moonshine
   CurrentState: HideLoop
   NextState: HideLoop
   Transitioning: 0

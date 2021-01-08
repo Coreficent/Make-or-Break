@@ -16,6 +16,8 @@
 
             Executor.Singleton.Initialize(_artifactContainer);
 
+            Time.timeScale = 5.0f;
+
             DebugLogger.Start(this);
         }
 
