@@ -3,7 +3,7 @@
     using Coreficent.Utility;
     using UnityEngine;
 
-    public class ColorController : MonoBehaviour
+    public class ColorControllerBase : MonoBehaviour
     {
         [SerializeField] private Material _material;
         [SerializeField] private Color _color = Color.clear;
@@ -17,10 +17,12 @@
 
         protected void Update()
         {
-            if (!Color.clear.Equals(_color))
-            {
-                _material.SetColor("_Color", _color);
-            }
+            _material.SetColor("_Color", _color);
+        }
+
+        private void OnApplicationQuit()
+        {
+            _material.SetColor("_Color", Color.white);
         }
     }
 }
