@@ -12,14 +12,14 @@
         private static List<ArtifactButton> ArtifactButtons = new List<ArtifactButton>();
         private static int Round = 0;
 
-        [SerializeField] private string _creation;
+        [SerializeField] private List<string> _creations = new List<string>();
         [SerializeField] private int _round = 0;
 
         protected override void Start()
         {
             base.Start();
 
-            SanityCheck.Check(this, _creation);
+            SanityCheck.Check(this, _creations);
 
             _button.interactable = _round == Round;
 
@@ -36,10 +36,13 @@
 
                 Executor.Singleton.ResetAdvancedState();
 
-                Artifact artifact = Executor.Singleton.ArtifactLookup[_creation];
+                foreach (string creation in _creations)
+                {
+                    Artifact artifact = Executor.Singleton.ArtifactLookup[creation];
 
-                artifact.NextState = "Originate";
-                artifact.Advance();
+                    artifact.NextState = "Originate";
+                    artifact.Advance();
+                }
 
                 UpdateRound();
             }
