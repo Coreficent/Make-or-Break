@@ -9258,6 +9258,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1433121091}
     m_Modifications:
+    - target: {fileID: 7189809272459708626, guid: 1f6c8882c7a5bc141ae776810f9a9974,
+        type: 3}
+      propertyPath: Predicates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189809272459708626, guid: 1f6c8882c7a5bc141ae776810f9a9974,
+        type: 3}
+      propertyPath: Predicates.Array.data[0]
+      value: (Originate, [Sun:Originate]) -> Shrink
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189809272459708626, guid: 1f6c8882c7a5bc141ae776810f9a9974,
+        type: 3}
+      propertyPath: Predicates.Array.data[1]
+      value: (Originate, [Moon:Originate]) -> Shrink
+      objectReference: {fileID: 0}
     - target: {fileID: 7189809272459708629, guid: 1f6c8882c7a5bc141ae776810f9a9974,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10825,6 +10840,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1433121091}
     m_Modifications:
+    - target: {fileID: 7189809272459708626, guid: 1f6c8882c7a5bc141ae776810f9a9974,
+        type: 3}
+      propertyPath: Predicates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189809272459708626, guid: 1f6c8882c7a5bc141ae776810f9a9974,
+        type: 3}
+      propertyPath: Predicates.Array.data[0]
+      value: (Originate, [Sun:Originate]) -> Shrink
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189809272459708626, guid: 1f6c8882c7a5bc141ae776810f9a9974,
+        type: 3}
+      propertyPath: Predicates.Array.data[1]
+      value: (Originate, [Moon:Originate]) -> Shrink
+      objectReference: {fileID: 0}
     - target: {fileID: 7189809272459708629, guid: 1f6c8882c7a5bc141ae776810f9a9974,
         type: 3}
       propertyPath: m_LocalPosition.x
