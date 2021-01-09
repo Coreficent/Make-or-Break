@@ -73,7 +73,7 @@
                         break;
 
                     case "Todo":
-                        Debug.LogWarning(messageType + _delimiter + message + _ender);
+                        Debug.Log(messageType + _delimiter + message + _ender);
                         break;
 
                     default:

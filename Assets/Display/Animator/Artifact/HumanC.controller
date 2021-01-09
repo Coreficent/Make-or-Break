@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8a4128e5454ee264b91185438807b3f2, type: 2}
+  m_Motion: {fileID: 7400000, guid: 9ad87392c2950804280d3ed666964b6e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -152,7 +152,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HumanB
+  m_Name: HumanC
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Originate

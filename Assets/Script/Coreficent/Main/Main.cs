@@ -7,16 +7,17 @@
 
     public class Main : MonoBehaviour
     {
+        [SerializeField] private float _gameSpeed = 1.0f;
         [SerializeField] private List<Transform> _artifactContainer = new List<Transform>();
 
         // initializer
         private void Start()
         {
-            SanityCheck.Check(this, _artifactContainer);
+            SanityCheck.Check(this, _artifactContainer, _gameSpeed);
 
             Executor.Singleton.Initialize(_artifactContainer);
 
-            Time.timeScale = 5.0f;
+            Time.timeScale = _gameSpeed;
 
             DebugLogger.Start(this);
         }
