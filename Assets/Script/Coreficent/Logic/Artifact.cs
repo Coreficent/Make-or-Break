@@ -1,5 +1,6 @@
 ﻿namespace Coreficent.Logic
 {
+    using Coreficent.Audio;
     using Coreficent.Cursor;
     using Coreficent.Utility;
     using System.Collections.Generic;
@@ -117,6 +118,16 @@
         public void Finish()
         {
             DebugLogger.Log("finish");
+
+            if (AudioManager.Singleton == null)
+            {
+                DebugLogger.Warn("audio manager is null");
+            }
+            else
+            {
+                AudioManager.Singleton.Play(name);
+            }
+
             CurrentState = NextState;
             Transitioning = false;
 
