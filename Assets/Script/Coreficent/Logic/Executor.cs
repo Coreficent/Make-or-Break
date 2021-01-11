@@ -10,7 +10,7 @@
 
         public Dictionary<string, Artifact> ArtifactLookup = new Dictionary<string, Artifact>();
 
-        private List<Artifact> _artifacts = new List<Artifact>();
+        public List<Artifact> _artifacts = new List<Artifact>();
 
         public bool Transitioning
         {

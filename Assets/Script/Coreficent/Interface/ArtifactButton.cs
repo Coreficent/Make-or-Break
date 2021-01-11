@@ -9,8 +9,8 @@
 
     public class ArtifactButton : SpriteButton
     {
-        private static List<ArtifactButton> ArtifactButtons = new List<ArtifactButton>();
-        private static int Round = 0;
+        public static List<ArtifactButton> ArtifactButtons = new List<ArtifactButton>();
+        public static int Round = 0;
 
         [SerializeField] private List<string> _creations = new List<string>();
         [SerializeField] private int _round = 0;
