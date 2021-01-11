@@ -12,7 +12,6 @@
 
         private List<Artifact> _artifacts = new List<Artifact>();
 
-        private bool _transitioning = false;
         public bool Transitioning
         {
             get

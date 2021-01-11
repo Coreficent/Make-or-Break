@@ -8301,6 +8301,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9028760016767539645, guid: ada7341c815b8b4499cbf2f2b87590fa,
+        type: 3}
+      propertyPath: LocationOffsetMinimum
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028760016767539645, guid: ada7341c815b8b4499cbf2f2b87590fa,
+        type: 3}
+      propertyPath: GroundOffsetMinimum
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028760016767539645, guid: ada7341c815b8b4499cbf2f2b87590fa,
+        type: 3}
+      propertyPath: GroundOffsetMaximum
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9028760017275565921, guid: ada7341c815b8b4499cbf2f2b87590fa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8857,7 +8872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1253405609}
   m_Layer: 0
-  m_Name: Display
+  m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8903,6 +8918,14 @@ MonoBehaviour:
   NextState: HideLoop
   Transitioning: 0
   Advanced: 1
+  LocationOffsetMinimum: 0
+  LocationOffsetMaximum: 0
+  AngleOffsetMinimum: 0
+  AngleOffsetMaximum: 0
+  GroundOffsetMinimum: 0
+  GroundOffsetMaximum: 0
+  SizeOffsetMinimum: 0
+  SizeOffsetMaximum: 0
 --- !u!114 &1269537517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10345,7 +10368,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: fbe84021b6839b244bbd1868c351244b, type: 2}
+      objectReference: {fileID: 9100000, guid: cb2062636a0264c47bc8c6f2ac711af5, type: 2}
     - target: {fileID: 5753581632108115799, guid: 8be80085da8cbd349b70cee41f9cdaf1,
         type: 3}
       propertyPath: m_Controller
@@ -11347,6 +11370,14 @@ MonoBehaviour:
   NextState: HideLoop
   Transitioning: 0
   Advanced: 1
+  LocationOffsetMinimum: 0
+  LocationOffsetMaximum: 0
+  AngleOffsetMinimum: 0
+  AngleOffsetMaximum: 0
+  GroundOffsetMinimum: 0
+  GroundOffsetMaximum: 0
+  SizeOffsetMinimum: 0
+  SizeOffsetMaximum: 0
 --- !u!4 &2077789696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3865724826957148758, guid: cb2500a57f0515347afbbe43fb19ce1b,
@@ -11866,6 +11897,31 @@ PrefabInstance:
       propertyPath: Predicates.Array.data[0]
       value: (Originate, [Sun:Originate]) -> Grow
       objectReference: {fileID: 0}
+    - target: {fileID: 3865724826957148761, guid: cb2500a57f0515347afbbe43fb19ce1b,
+        type: 3}
+      propertyPath: AngleOffsetMinimum
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865724826957148761, guid: cb2500a57f0515347afbbe43fb19ce1b,
+        type: 3}
+      propertyPath: AngleOffsetMaximum
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865724826957148761, guid: cb2500a57f0515347afbbe43fb19ce1b,
+        type: 3}
+      propertyPath: LocationOffsetMaximum
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865724826957148761, guid: cb2500a57f0515347afbbe43fb19ce1b,
+        type: 3}
+      propertyPath: LocationOffsetMinimum
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865724826957148761, guid: cb2500a57f0515347afbbe43fb19ce1b,
+        type: 3}
+      propertyPath: GroundOffsetMaximum
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3865724826957148760, guid: cb2500a57f0515347afbbe43fb19ce1b, type: 3}
     - {fileID: 3865724826957148759, guid: cb2500a57f0515347afbbe43fb19ce1b, type: 3}
@@ -12241,6 +12297,36 @@ PrefabInstance:
     - target: {fileID: 9028760016767539644, guid: ada7341c815b8b4499cbf2f2b87590fa,
         type: 3}
       propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028760016767539645, guid: ada7341c815b8b4499cbf2f2b87590fa,
+        type: 3}
+      propertyPath: GroundOffsetMinimum
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028760016767539645, guid: ada7341c815b8b4499cbf2f2b87590fa,
+        type: 3}
+      propertyPath: GroundOffsetMaximum
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028760016767539645, guid: ada7341c815b8b4499cbf2f2b87590fa,
+        type: 3}
+      propertyPath: AngleOffsetMaximum
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028760016767539645, guid: ada7341c815b8b4499cbf2f2b87590fa,
+        type: 3}
+      propertyPath: AngleOffsetMinimum
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028760016767539645, guid: ada7341c815b8b4499cbf2f2b87590fa,
+        type: 3}
+      propertyPath: SizeOffsetMinimum
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028760016767539645, guid: ada7341c815b8b4499cbf2f2b87590fa,
+        type: 3}
+      propertyPath: SizeOffsetMaximum
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9028760017275565935, guid: ada7341c815b8b4499cbf2f2b87590fa,
