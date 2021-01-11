@@ -1564,6 +1564,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
         type: 3}
+      propertyPath: Predicates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
+        type: 3}
       propertyPath: SizeOffsetMinimum
       value: 0
       objectReference: {fileID: 0}
@@ -1591,6 +1596,17 @@ PrefabInstance:
         type: 3}
       propertyPath: AngleOffsetMaximum
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
+        type: 3}
+      propertyPath: Predicates.Array.data[1]
+      value: (HideLoop, [SunniestState:Originate]) -> Grow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
+        type: 3}
+      propertyPath: Predicates.Array.data[0]
+      value: (HideLoop, [SunnyState:Originate, SunnierState:Originate, SunniestState:Originate])
+        -> Burn
       objectReference: {fileID: 0}
     - target: {fileID: 5482940076422963654, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
         type: 3}
@@ -1994,6 +2010,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
         type: 3}
+      propertyPath: Predicates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
+        type: 3}
       propertyPath: SizeOffsetMinimum
       value: 0
       objectReference: {fileID: 0}
@@ -2021,6 +2042,17 @@ PrefabInstance:
         type: 3}
       propertyPath: AngleOffsetMaximum
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
+        type: 3}
+      propertyPath: Predicates.Array.data[1]
+      value: (HideLoop, [SunniestState:Originate]) -> Grow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
+        type: 3}
+      propertyPath: Predicates.Array.data[0]
+      value: (HideLoop, [SunnyState:Originate, SunnierState:Originate, SunniestState:Originate])
+        -> Burn
       objectReference: {fileID: 0}
     - target: {fileID: 5482940076422963654, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
         type: 3}
@@ -3486,6 +3518,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
         type: 3}
+      propertyPath: Predicates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
+        type: 3}
       propertyPath: SizeOffsetMinimum
       value: 0
       objectReference: {fileID: 0}
@@ -3513,6 +3550,17 @@ PrefabInstance:
         type: 3}
       propertyPath: AngleOffsetMaximum
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
+        type: 3}
+      propertyPath: Predicates.Array.data[1]
+      value: (HideLoop, [SunniestState:Originate]) -> Grow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
+        type: 3}
+      propertyPath: Predicates.Array.data[0]
+      value: (HideLoop, [SunnyState:Originate, SunnierState:Originate, SunniestState:Originate])
+        -> Burn
       objectReference: {fileID: 0}
     - target: {fileID: 5482940076422963654, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
         type: 3}
@@ -4747,6 +4795,10 @@ MonoBehaviour:
   Predicates:
   - (HideLoop, [Light:Sunshine]) -> Sunshine
   - (HideLoop, [Light:Moonshine]) -> Moonshine
+  - (Moonshine, [ShadyState:Originate, ShadierState:Originate, ShadiestState:Originate])
+    -> Freeze
+  - (Sunshine, [SunnyState:Originate, SunnierState:Originate, SunniestState:Originate])
+    -> Burn
   CurrentState: HideLoop
   NextState: HideLoop
   Transitioning: 0
@@ -8483,6 +8535,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
         type: 3}
+      propertyPath: Predicates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
+        type: 3}
       propertyPath: SizeOffsetMinimum
       value: 0
       objectReference: {fileID: 0}
@@ -8510,6 +8567,17 @@ PrefabInstance:
         type: 3}
       propertyPath: AngleOffsetMaximum
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
+        type: 3}
+      propertyPath: Predicates.Array.data[1]
+      value: (HideLoop, [SunniestState:Originate]) -> Grow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448767921324203131, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
+        type: 3}
+      propertyPath: Predicates.Array.data[0]
+      value: (HideLoop, [SunnyState:Originate, SunnierState:Originate, SunniestState:Originate])
+        -> Burn
       objectReference: {fileID: 0}
     - target: {fileID: 5482940076422963654, guid: 23e34c3bd3a55f54ab10d1346b25f95e,
         type: 3}
