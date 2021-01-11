@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Predicates:
-  - (HideLoop, [Axe:Originate]) -> Decay
+  - (HideLoop, [Axe:Originate, Sun:Originate]) -> Decay
   CurrentState: HideLoop
   NextState: HideLoop
   Transitioning: 0
@@ -1059,7 +1059,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 623804146}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &147889603 stripped
 Transform:
@@ -3728,6 +3728,7 @@ Transform:
   - {fileID: 1433121091}
   - {fileID: 1701480684}
   - {fileID: 528256695}
+  - {fileID: 1228166479}
   - {fileID: 145730241}
   m_Father: {fileID: 163443907}
   m_RootOrder: 1
@@ -4058,6 +4059,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: MushroomE
       objectReference: {fileID: 0}
+    - target: {fileID: 5132312639657020142, guid: e95f430e4b3426843877377e901a5389,
+        type: 3}
+      propertyPath: Predicates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132312639657020142, guid: e95f430e4b3426843877377e901a5389,
+        type: 3}
+      propertyPath: Predicates.Array.data[1]
+      value: (Grow, [Axe:Originate]) -> Mushroom
+      objectReference: {fileID: 0}
     - target: {fileID: 5132312639657020143, guid: e95f430e4b3426843877377e901a5389,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4231,8 +4242,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5132312639657020142, guid: e95f430e4b3426843877377e901a5389,
         type: 3}
+      propertyPath: Predicates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132312639657020142, guid: e95f430e4b3426843877377e901a5389,
+        type: 3}
       propertyPath: Predicates.Array.data[0]
       value: (HideLoop, [Moon:Originate]) -> Grow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132312639657020142, guid: e95f430e4b3426843877377e901a5389,
+        type: 3}
+      propertyPath: Predicates.Array.data[1]
+      value: (Grow, [Axe:Originate]) -> Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 5132312639657020143, guid: e95f430e4b3426843877377e901a5389,
         type: 3}
@@ -4272,7 +4293,7 @@ PrefabInstance:
     - target: {fileID: 5132312639657020143, guid: e95f430e4b3426843877377e901a5389,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5132312639657020143, guid: e95f430e4b3426843877377e901a5389,
         type: 3}
@@ -4318,6 +4339,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MushroomB
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132312639657020142, guid: e95f430e4b3426843877377e901a5389,
+        type: 3}
+      propertyPath: Predicates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132312639657020142, guid: e95f430e4b3426843877377e901a5389,
+        type: 3}
+      propertyPath: Predicates.Array.data[1]
+      value: (Grow, [Axe:Originate]) -> Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 5132312639657020143, guid: e95f430e4b3426843877377e901a5389,
         type: 3}
@@ -9661,7 +9692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Predicates:
-  - (HideLoop, [Axe:Originate]) -> Decay
+  - (HideLoop, [Axe:Originate, Sun:Brighten]) -> Decay
   CurrentState: HideLoop
   NextState: HideLoop
   Transitioning: 0
@@ -10189,6 +10220,7 @@ MonoBehaviour:
   - {fileID: 1433121091}
   - {fileID: 528256695}
   - {fileID: 1701480684}
+  - {fileID: 1228166479}
 --- !u!1 &1146291330
 GameObject:
   m_ObjectHideFlags: 0
@@ -10428,6 +10460,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: MushroomC
       objectReference: {fileID: 0}
+    - target: {fileID: 5132312639657020142, guid: e95f430e4b3426843877377e901a5389,
+        type: 3}
+      propertyPath: Predicates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132312639657020142, guid: e95f430e4b3426843877377e901a5389,
+        type: 3}
+      propertyPath: Predicates.Array.data[1]
+      value: (Grow, [Axe:Originate]) -> Mushroom
+      objectReference: {fileID: 0}
     - target: {fileID: 5132312639657020143, guid: e95f430e4b3426843877377e901a5389,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10500,6 +10542,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e95f430e4b3426843877377e901a5389, type: 3}
+--- !u!1 &1228166478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1228166479}
+  m_Layer: 0
+  m_Name: R3M-Axe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1228166479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228166478}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.2933702, y: 0.73340964, z: 0.06442642}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 623804146}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1253405608
 GameObject:
   m_ObjectHideFlags: 0
@@ -11055,7 +11127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1433121091}
   m_Layer: 0
-  m_Name: DynamicArtifact
+  m_Name: R1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11882,6 +11954,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MushroomD
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132312639657020142, guid: e95f430e4b3426843877377e901a5389,
+        type: 3}
+      propertyPath: Predicates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132312639657020142, guid: e95f430e4b3426843877377e901a5389,
+        type: 3}
+      propertyPath: Predicates.Array.data[1]
+      value: (Grow, [Axe:Originate]) -> Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 5132312639657020143, guid: e95f430e4b3426843877377e901a5389,
         type: 3}
@@ -14571,6 +14653,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: MushroomA
       objectReference: {fileID: 0}
+    - target: {fileID: 5132312639657020142, guid: e95f430e4b3426843877377e901a5389,
+        type: 3}
+      propertyPath: Predicates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132312639657020142, guid: e95f430e4b3426843877377e901a5389,
+        type: 3}
+      propertyPath: Predicates.Array.data[1]
+      value: (Grow, [Axe:Originate]) -> Mushroom
+      objectReference: {fileID: 0}
     - target: {fileID: 5132312639657020143, guid: e95f430e4b3426843877377e901a5389,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14866,7 +14958,7 @@ PrefabInstance:
     - target: {fileID: 9028760016767539645, guid: ada7341c815b8b4499cbf2f2b87590fa,
         type: 3}
       propertyPath: Predicates.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9028760016767539645, guid: ada7341c815b8b4499cbf2f2b87590fa,
         type: 3}
@@ -14902,6 +14994,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Predicates.Array.data[0]
       value: (Originate, [Tree:Grow]) -> Brighten
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028760016767539645, guid: ada7341c815b8b4499cbf2f2b87590fa,
+        type: 3}
+      propertyPath: Predicates.Array.data[1]
+      value: (Originate, [Clump:Decay]) -> Brighten
       objectReference: {fileID: 0}
     - target: {fileID: 9028760017275565935, guid: ada7341c815b8b4499cbf2f2b87590fa,
         type: 3}
