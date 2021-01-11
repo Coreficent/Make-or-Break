@@ -38,7 +38,7 @@
         private Animator _animator;
         private Artifact _artifact;
 
-        private float _planetRadius = 5.0f;
+        private float _planetRadius = 4.5f;
 
         private void Start()
         {
