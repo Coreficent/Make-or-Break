@@ -3427,7 +3427,7 @@ GameObject:
   - component: {fileID: 532370660}
   - component: {fileID: 532370664}
   m_Layer: 5
-  m_Name: Life
+  m_Name: Planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11134,9 +11134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _creations:
-  - Blocker
-  - Moon
-  - HumanC
+  - ShadyState
   _round: 1
 --- !u!95 &1146291333
 Animator:
@@ -15384,7 +15382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2017258429}
   m_Layer: 0
-  m_Name: R2
+  m_Name: R2S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
