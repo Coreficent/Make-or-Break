@@ -1,5 +1,6 @@
 ﻿namespace Coreficent.Audio
 {
+    using Coreficent.Logic;
     using Coreficent.Utility;
     using System.Text.RegularExpressions;
     using UnityEngine;
@@ -25,15 +26,26 @@
         {
             string trim = Regex.Replace(name, @"[\d-]", string.Empty).Replace("(", string.Empty).Replace(")", string.Empty).Replace(" ", string.Empty).ToLower();
 
+
+            if (Executor.Singleton.ArtifactLookup["SunnyState"].CurrentState == "Originate")
+            {
+                if (Executor.Singleton.ArtifactLookup["SunnierState"].CurrentState == "Originate")
+                {
+                    if (Executor.Singleton.ArtifactLookup["SunniestState"].CurrentState == "Originate")
+                    {
+                        Fire.Play();
+                    }
+                }
+            }
             if (trim == "seed")
             {
                 Seed.Play();
             }
-            else if (trim == "tree")
+            else if (trim == "tree" || trim == "sapling")
             {
                 Plant.Play();
             }
-            else if (trim == "mushroom")
+            else if (trim == "mushroom" || trim == "mushroomtree")
             {
                 Mushroom.Play();
             }
