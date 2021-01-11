@@ -1,5 +1,6 @@
 ﻿namespace Coreficent.Controller
 {
+    using Coreficent.Logic;
     using Coreficent.Utility;
     using UnityEngine;
 
@@ -17,12 +18,31 @@
 
         protected void Update()
         {
-            SetColor(_color);
+            if (Color.clear != _color || Color.white != _color)
+            {
+                SetColor(_color);
+            }
+            /*
+            Artifact artifact = null;
+            artifact = GetComponent<Artifact>();
+            if (!artifact)
+            {
+                artifact = transform.parent.GetComponent<Artifact>();
+            }
+            if (artifact && artifact.CurrentState.Contains("Hide"))
+            {
+                DebugLogger.Log("no action");
+            }
+            else
+            {
+                SetColor(_color);
+            }
+            */
         }
 
         private void OnApplicationQuit()
         {
-            if(_material.shader.name == "Skybox/Cubemap")
+            if (_material.shader.name == "Skybox/Cubemap")
             {
                 SetColor(Color.gray);
             }
