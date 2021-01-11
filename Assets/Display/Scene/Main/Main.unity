@@ -3617,7 +3617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd34fca993adac4183e7637cf04aa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameSpeed: 5
+  _gameSpeed: 1
   _artifactContainer:
   - {fileID: 1312269632}
   - {fileID: 761002007}
